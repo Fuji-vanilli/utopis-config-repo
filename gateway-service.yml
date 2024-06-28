@@ -8,8 +8,9 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761
 
-okta:
-  oauth2:
-    issuer: https://fuji-pj.us.auth0.com/
-    client-id: FhiH98W5HODmGYE18sz226695w47XeOn
-    client-secret: eQZ3hRsZTdwNwzegfRNH-es3gtKTqBsj3nIKWpGUGRdZLxDgU31fSKjnWET9y5oO
+spring:
+  security:
+    oauth2:
+      resourceServer:
+        issuer-uri: http://localhost:8080/realms/utopis-realm
+        jwk-set-url: ${spring.security.oauth2.resourceServer.jwt.issuer-uri}/protocol/openid-connect/certs
