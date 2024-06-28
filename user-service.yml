@@ -15,4 +15,4 @@ spring:
     oauth2:
       resourceServer:
         jwt:
-          issuer: https://fuji-pj.us.auth0.com/
+          issuer-uri: https://fuji-pj.us.auth0.com/
