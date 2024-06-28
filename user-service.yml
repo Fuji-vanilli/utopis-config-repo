@@ -11,8 +11,8 @@ spring:
     mongodb:
       uri: mongodb://ixml:1234@mongodb-user:27017/USER-DB?authSource=admin
 
-okta:
-  oauth2:
-    issuer: https://fuji-pj.us.auth0.com/
-    client-id: FhiH98W5HODmGYE18sz226695w47XeOn
-    client-secret: eQZ3hRsZTdwNwzegfRNH-es3gtKTqBsj3nIKWpGUGRdZLxDgU31fSKjnWET9y5oO
+  security:
+    oauth2:
+      resourceServer:
+        jwt:
+          issuer: https://fuji-pj.us.auth0.com/
