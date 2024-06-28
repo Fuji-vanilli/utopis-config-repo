@@ -20,6 +20,6 @@ spring:
 
 jwt:
   oauth2:
-    client-id: utopis-client
+    resource-id: utopis-client
     principal-attribute: preferred_name
 
