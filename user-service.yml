@@ -15,4 +15,11 @@ spring:
     oauth2:
       resourceServer:
         jwt:
-          issuer-uri: https://fuji-pj.us.auth0.com/
+          issuer-uri: http://localhost:8080/realms/utopis-realm
+          jwk-set-url: ${spring.security.oauth2.resourceServer.jwt.issuer-uri}/protocol/openid-connect/certs
+
+jwt:
+  oauth2:
+    client-id: utopis-client
+    principal-attribute: preferred_name
+
