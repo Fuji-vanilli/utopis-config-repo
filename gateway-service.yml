@@ -14,7 +14,7 @@ spring:
       client:
         registration:
           gateway:
-            provider: gateway-privider
+            provider: gateway-provider
             client-id: utopis-id
             client-secret: QP5BufN6nVHGLcNCSCq3eM1h8F7sTsNf
             authorization-grant-type: authorization_code
