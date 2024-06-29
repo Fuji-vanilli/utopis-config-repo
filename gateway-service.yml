@@ -15,7 +15,7 @@ spring:
         registration:
           gateway:
             provider: gateway-provider
-            client-id: utopis-id
+            client-id: utopis-client
             client-secret: QP5BufN6nVHGLcNCSCq3eM1h8F7sTsNf
             authorization-grant-type: authorization_code
             redirect-uri: http://localhost:8800/login/oauth2/code/{registrationId}
