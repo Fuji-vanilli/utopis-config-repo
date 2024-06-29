@@ -11,15 +11,5 @@ eureka:
 spring:
   security:
     oauth2:
-      client:
-        registration:
-          gateway:
-            provider: gateway-provider
-            client-id: utopis-client
-            client-secret: QP5BufN6nVHGLcNCSCq3eM1h8F7sTsNf
-            authorization-grant-type: authorization_code
-            redirect-uri: http://localhost:8800/login/oauth2/code/{registrationId}
-            scope: openid, app_admin
-        provider:
-          gateway-provider:
-            issuer-uri: http://localhost:8080/realms/utopis-realm
+      resourceServer:
+        issuer-uri: http://localhost:8080/realms/utopis-realm
