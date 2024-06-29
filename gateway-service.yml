@@ -11,6 +11,15 @@ eureka:
 spring:
   security:
     oauth2:
-      resourceServer:
-        issuer-uri: http://localhost:8080/realms/utopis-realm
-        jwk-set-url: ${spring.security.oauth2.resourceServer.jwt.issuer-uri}/protocol/openid-connect/certs
+      client:
+        registration:
+          gateway:
+            provider: gateway-privider
+            client-id: utopis-id
+            client-secret: QP5BufN6nVHGLcNCSCq3eM1h8F7sTsNf
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8800/login/oauth2/code/{registrationId}
+            scope: openid, app_admin
+        provider:
+          gateway-provider:
+            issuer-uri: http://localhost:8080/realms/utopis-realm
