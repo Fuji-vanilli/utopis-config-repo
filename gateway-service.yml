@@ -13,3 +13,4 @@ spring:
     oauth2:
       resourceServer:
         issuer-uri: http://localhost:8080/realms/utopis-realm
+        jwk-set-url: ${spring.security.oauth2.resourceServer.jwt.issuer-uri}/openid-connect/certs
