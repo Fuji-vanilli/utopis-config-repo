@@ -1,0 +1,12 @@
+server:
+  port: 7200
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://ixm:1234@mongodb-property:27017/PROPERTY-DB?authSource=admin
